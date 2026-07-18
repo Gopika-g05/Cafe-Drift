@@ -1,4 +1,50 @@
 // frontend/js/menu.js (For public/guest menu.html)
+function resolveImageSrc(item) {
+    const fallbackMap = {
+        espresso: 'espresso.jpg',
+        cappuccino: 'cappuccino.jpg',
+        latte: 'latte.jpg',
+        sandwich: 'sandwich.jpg',
+        burger: 'burger.jpg',
+        fries: 'fries.jpg',
+        brownie: 'brownie.jpg',
+        cake: 'cake.jpg',
+        donut: 'donut.jpg',
+        tea: 'hot-tea.jpg',
+        chai: 'chai.jpg',
+        matcha: 'matcha.jpg',
+        chocolate: 'hot-chocolate.jpg',
+        steamer: 'steamer.jpg',
+        milk: 'flavored-milk.jpg',
+        smoothie: 'smoothie.jpg',
+        frappe: 'frappe.jpg',
+        milkshake: 'milkshake.jpg',
+        juice: 'fresh-juice.jpg',
+        lemonade: 'lemonade.jpg',
+        soda: 'fruit-soda.jpg'
+    };
+
+    const rawValue = item?.image || '';
+    const normalized = String(rawValue).trim().replace(/^\/+/, '').replace(/^images\//i, '').replace(/^frontend\//i, '');
+
+    if (normalized.startsWith('http')) {
+        return normalized;
+    }
+
+    if (normalized) {
+        return `/images/${normalized}`;
+    }
+
+    const itemName = String(item?.name || '').toLowerCase();
+    for (const [key, file] of Object.entries(fallbackMap)) {
+        if (itemName.includes(key)) {
+            return `/images/${file}`;
+        }
+    }
+
+    return '/images/default-food.jpg';
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     const menuContainer = document.getElementById("menuContainer");
     if (!menuContainer) return;
@@ -15,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Render card layouts WITHOUT any "Add to Cart" buttons
         menuContainer.innerHTML = items.map(item => `
             <div class="menu-card" data-id="${item._id}">
-                <img src="/images/${item.image || 'default-food.jpg'}" alt="${item.name}" class="menu-item-img">
+                <img src="${resolveImageSrc(item)}" alt="${item.name}" class="menu-item-img" onerror="this.onerror=null;this.src='/images/default-food.jpg';">
                 <div class="menu-item-details">
                     <h3>${item.name}</h3>
                     <p class="description">${item.description || 'Freshly made to order.'}</p>
