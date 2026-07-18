@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Cafe Drift</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="user-menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <!-- Profile Header -->
+
+    <section class="profile-header">
+
+        <img src="images/logo.png" alt="Profile">
+
+        <h1>Welcome to Cafe Drift</h1>
+
+        <p>Your Coffee Journey Starts Here</p>
+
+    </section>
+
+    <!-- Profile Information -->
+
+    <section class="profile-info">
+        <div class="welcome-card">
+    <h2>Hello, Coffee Lover ☕</h2>
+    <p>
+        Welcome back to Cafe Drift.
+        Ready for another perfect cup?
+    </p>
+</div>
+        <div class="card">
+            <h2>My Profile</h2>
+
+            <p><strong>Name:</strong>
+<span id="fullname"></span>
+</p>
+
+<p><strong>Email:</strong>
+<span id="email"></span>
+</p>
+
+<p><strong>Phone:</strong>
+<span id="phone"></span>
+</p>
+        </div>
+
+        <div class="card">
+            <h2>Cart Summary</h2>
+
+            <p>Items in Cart: <span id="cart-items">0</span></p>
+            <script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+document.getElementById("cart-items").innerText = cart.length;
+</script>
+
+            <a href="cart.html" class="btn">View Cart</a>
+        </div>
+
+        <div class="card">
+            <h2>Quick Actions</h2>
+
+            <a href="user-menu.html" class="btn">Browse Menu</a>
+
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Cafe Drift. All Rights Reserved.</p>
+    </footer>
+    <script src="js/auth.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

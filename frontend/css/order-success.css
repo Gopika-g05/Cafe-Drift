@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f8f5f2;
+}
+
+.success-container{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("../images/Copilot_20260616_111646.png");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.success-box{
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.success-box h1{
+
+    color:green;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.success-box p{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+}
+
+.success-box a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 28px;
+
+    background:#8b5a2b;
+
+    color:white;
+
+    text-decoration:none;
+    font-size:16px;
+    border-radius:10px;
+}
+
+.success-box a:hover{
+    
+    background:#6f4e37;
+}

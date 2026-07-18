@@ -1,0 +1,251 @@
+/* =========================RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Times New Roman', Times, serif;
+    background:#f8f5f2;
+    margin:0;
+    overflow-x:hidden;
+}
+/* =========================NAVIGATION BAR
+========================= */
+
+nav{
+    background-color:#390d05;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    font-family: "";
+}
+
+nav a:hover{
+    color:#d7ccc8;
+}
+
+/* =========================HEADER
+========================= */
+
+.menu-header{
+    background-image:url("../images/Copilot_20260613_221736.png");
+    background-size:cover;
+    background-position:center;
+
+    text-align:center;
+    color:white;
+
+    padding:100px 20px;
+}
+
+.menu-header h1{
+    font-size:70px;
+    font-family:"Monotype Corsiva";
+    margin-bottom:20px;
+
+    text-shadow:2px 2px 10px black;
+}
+
+.menu-header p{
+    font-size:22px;
+    text-shadow:2px 2px 8px black;
+    font-family:"Monotype Corsiva";
+}
+
+/* =========================MENU SECTION
+========================= */
+
+.menu-section{
+    padding:50px 0;
+}
+
+.menu-section h2{
+    text-align:center;
+    margin-bottom:40px;
+
+    font-size:45px;
+    font-family:"Monotype Corsiva";
+
+    color:#3e2723;
+}
+
+/* =========================
+MENU CONTAINER
+========================= */
+.menu-container{
+    display: grid;
+    /* Automatically creates columns based on screen width */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    padding: 20px 20px;
+    
+    /* Centers the items when there are only a few cards */
+    justify-content: center;
+    justify-items: center;
+    
+    /* Limits the grid expanse on massive monitors */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* =========================MENU CARD
+========================= */
+
+.menu-card{
+    width: 100%;       /* Let grid handle the card widths smoothly */
+    max-width: 320px;  /* Keeps cards sharp and uniform */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+    text-align: center;
+    transition: 0.3s;
+    
+    /* Flex column setup forces description, price, and button to stack vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.menu-card img{
+    width:100%;
+    height:170px;
+    object-position: center;
+    object-fit:cover;
+    display:block;
+}
+
+.menu-card h3{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color:#3e2723;
+    font-size:22px; /* Bumped slightly to match your theme's elegance */
+}
+
+.menu-card p:not(.price) {
+    font-size: 15px;
+    color: #666;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.price{
+    color:#8b5a2b;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:12px;
+    display: block; /* Forces the price tag to claim its own full line width */
+    width: 100%;
+}
+
+
+/* =========================BUTTON
+========================= */
+
+
+.menu-card button{
+    background:#8b5a2b;
+    color:white;
+    border:none;
+
+    /* Block display ensures it drops cleanly onto a new row below the price line */
+    display: inline-block; 
+    
+    padding: 10px 24px;
+    margin-bottom: 20px; /* Spacing at the very bottom of the card card container slot */
+    border-radius: 50px; /* Rounded pill style matches your cart design beautifully */
+    cursor:pointer;
+    font-size:14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.menu-card button:hover{
+    background:#6f4e37;
+    transform:scale(1.05);
+}
+
+/* =========================FOOTER
+========================= */
+
+footer{
+
+    background-color:#3e2723;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    margin-top:50px;
+}
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .menu-header h1{
+        font-size:50px;
+    }
+
+    .menu-section{
+        padding:40px 20px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:10px;
+    }
+}
+#toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    background:#3e2723;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.4s;
+
+    z-index:9999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+}

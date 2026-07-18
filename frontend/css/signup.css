@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+BODY
+========================= */
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-color:#f8f5f2;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+nav{
+    background-color:#390d05;
+    padding:20px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d7ccc8;
+}
+
+/* =========================
+SIGNUP SECTION
+========================= */
+
+.signup-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px 0;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("../images/Copilot_20260613_191041.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+/* =========================SIGNUP BOX
+========================= */
+
+.signup-box{
+
+    width:380px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0px 8px 32px rgba(0,0,0,0.35);
+
+    animation:fadeIn 1s ease;
+
+    transition:0.4s ease;
+}
+
+.signup-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0px 12px 40px rgba(0,0,0,0.4);
+}
+
+/* =========================
+HEADING
+========================= */
+
+.signup-box h1{
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-family:"Monotype Corsiva";
+
+    font-size:40px;
+
+    text-shadow:
+    2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* =========================INPUTS
+========================= */
+
+.signup-box input{
+
+    width:90%;
+
+    padding:10px;
+
+    margin:8px 0;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+    rgba(255,255,255,0.9);
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s ease;
+}
+
+.signup-box input:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:
+    0px 0px 10px rgba(139,90,43,0.5);
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.signup-box button{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2c1500,
+        #473427
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.signup-box button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0px 8px 20px rgba(111,78,55,0.4);
+}
+
+/* =========================LOGIN LINK
+========================= */
+
+.signup-box p{
+
+    margin-top:20px;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.signup-box a{
+
+    color:#000000;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.signup-box a:hover{
+
+    text-decoration:underline;
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

@@ -1,0 +1,207 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background:#f8f5f2;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#390d05;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 25px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d7ccc8;
+}
+
+/* HEADER */
+
+.menu-header{
+
+    background:url("../images/Copilot_20260613_221736.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:100px 20px;
+
+}
+
+.menu-header h1{
+
+    font-size:65px;
+
+    font-family:"Monotype Corsiva";
+
+}
+
+.menu-header p{
+
+    margin-top:15px;
+    
+    font-size:22px;
+
+}
+
+/* SECTION */
+
+.menu-section{
+
+    padding:50px;
+
+}
+
+.menu-section h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    color:#3e2723;
+
+    margin-bottom:40px;
+
+    font-family:"Monotype Corsiva";
+
+}
+
+/* GRID */
+
+.menu-container {
+    display: grid;
+    /* Automatically handles sizing items to fit the screen */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    padding: 20px 0;
+    
+    /* Centers the item grid nicely if there are only a few cards */
+    justify-content: center; 
+    
+    /* Limits the width on ultra-wide screens so the cards don't stretch too much */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-container::-webkit-scrollbar{
+    height: 10px;
+}
+
+.menu-container::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.menu-container::-webkit-scrollbar-thumb{
+    background: #8b5a2b;
+    border-radius: 10px;
+}
+
+.menu-container::-webkit-scrollbar-thumb:hover{
+    background: #6f4e37;
+}
+/* CARD */
+
+.menu-card {
+    /* Changed flex: 0 0 320px to width handles so the grid handles sizing smoothly */
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGE */
+.menu-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+/* TITLE */
+
+.menu-card h3{
+
+    padding:20px;
+
+    color:#3e2723;
+
+    font-size:28px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#3e2723;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:50px;
+
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+    .menu-section {
+        padding: 30px;
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .menu-container {
+        /* Forces 1 column on small phones */
+        grid-template-columns: 1fr; 
+        max-width: 400px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-header h1 {
+        font-size: 45px;
+    }
+
+    .menu-header p {
+        font-size: 18px;
+    }
+}

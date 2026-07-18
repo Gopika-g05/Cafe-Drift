@@ -1,0 +1,391 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#f8f5f2;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    background-color:#390d05;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d7ccc8;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header{
+
+    background-color:#241405;
+
+    color:white;
+
+    text-align:center;
+    
+    padding:30px 20px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin-bottom: 10px;
+}
+.page-header h1{
+
+    font-size:48px;
+
+    font-family:"Monotype Corsiva";
+    margin:10px 0;
+}
+
+.page-header p{
+
+    font-size:18px;
+    margin-top: 5px;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section{
+
+    display:flex;
+
+    gap:40px;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    flex-wrap:wrap;
+
+    padding:50px 30px;
+}
+
+/* Contact Info */
+
+.contact-info{
+
+    flex:1;
+
+    min-width:320px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.contact-info h2{
+
+    color:#3e2723;
+
+    margin-bottom:25px;
+
+    font-size:20px;
+
+    font-family:"Monotype Corsiva";
+}
+
+.contact-info p{
+
+    font-size:15px;
+
+    margin-bottom:15px;
+
+    line-height:1.8;
+}
+
+/* Contact Form */
+
+.contact-form{
+
+    flex:1;
+
+    min-width:320px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.contact-form h2{
+
+    text-align:center;
+
+    color:#3e2723;
+
+    margin-bottom:25px;
+
+    font-size:40px;
+
+    font-family:"Monotype Corsiva";
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+}
+
+.contact-form textarea{
+
+    height:150px;
+    font-family: 'Times New Roman', Times, serif;
+    resize:none;
+}
+
+.contact-form button{
+
+    width:100%;
+
+    padding:15px;
+
+    background-color:#8b5a2b;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.contact-form button:hover{
+
+    background-color:#6f4e37;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews-section{
+
+    padding:50px 30px;
+
+    background-color:#f1ece7;
+}
+
+.reviews-section h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#3e2723;
+
+    margin-bottom:40px;
+
+    font-family:"Monotype Corsiva";
+}
+
+.reviews-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.review-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    text-align:center;
+}
+
+.review-card h3{
+
+    color:#3e2723;
+
+    margin-bottom:10px;
+}
+
+.stars{
+
+    color:gold;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   REVIEW FORM
+========================= */
+
+.review-form{
+
+    max-width:700px;
+    
+    margin:60px auto;
+
+    padding:40px;
+}
+
+.review-form h2{
+
+    text-align:center;
+
+    color:#3e2723;
+
+    margin-bottom:25px;
+
+    font-size:45px;
+
+    font-family:"Monotype Corsiva";
+}
+
+.review-form input,
+.review-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius:8px;
+}
+
+.review-form textarea{
+
+    height:150px;
+}
+
+.review-form button{
+
+    display:block;
+
+    margin:auto;
+
+    padding:15px 35px;
+
+    background-color:#8b5a2b;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.review-form button:hover{
+
+    background-color:#6f4e37;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background-color:#3e2723;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+footer p{
+
+    margin-bottom:10px;
+}
+.parallax{
+    background-image:url("../images/Copilot_20260613_191409.jpeg");
+
+    min-height:300px;
+
+    background-attachment:fixed;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:cover;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.parallax-text{
+    text-align:center;
+    padding:40px;
+    font-size:28px;
+    max-width:900px;
+    color:white;
+}
+.parallax-text p{
+    font-size:20px;
+    line-height:1.7;
+}

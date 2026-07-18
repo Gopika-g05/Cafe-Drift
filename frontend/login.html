@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cafe Drift</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<section class="login-container">
+
+    <div class="login-box">
+
+        <h1>Drift Cafe</h1>
+        <h2>Welcome Back</h2>
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+                required>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+                required>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p>
+            New User?
+            <a href="signup.html">
+                Create Account
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+<script src="js/login.js"></script>
+<div id="toast" class="toast"></div>
+</body>
+</html>

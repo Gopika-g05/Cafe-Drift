@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Menu - Cafe Drift</title>
+
+    <link rel="stylesheet" href="css/use-menu.css">
+</head>
+<body>
+
+<nav>
+    <a href="profile.html">Profile</a>
+    <a href="cart.html">
+        Cart (<span id="cart-count">0</span>)
+    </a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<section class="menu-header">
+
+    <h1>Cafe Drift Menu</h1>
+
+    <p>Choose your favourite items</p>
+
+</section>
+
+<section class="menu-section">
+    <h2>Coffee</h2>
+
+    <div class="menu-container" id="coffee-menu">
+
+    </div>
+</section>
+    <!-- Snacks Section -->
+
+    <section class="menu-section">
+
+    <h2>Snacks</h2>
+
+    <div class="menu-container" id="snacks-menu">
+
+    </div>
+
+</section>
+    <!-- Desserts -->
+
+    <section class="menu-section">
+
+    <h2>Desserts</h2>
+
+    <div class="menu-container" id="desserts-menu">
+
+    </div>
+
+</section>
+
+<section class="menu-section">
+
+    <h2>Teas</h2>
+<div class="menu-container" id="tea-menu">
+
+</div>
+</section>
+
+<section class="menu-section">
+
+    <h2>Chocolate & Milk</h2>
+
+    <div class="menu-container" id="chocolate-menu">
+
+    </div>
+
+</section>
+
+<section class="menu-section">
+
+    <h2>Blended & Iced Treats</h2>
+
+    <div class="menu-container" id="blended-menu">
+
+    </div>
+
+</section>
+
+<section class="menu-section">
+
+    <h2>Juice & Soda</h2>
+
+    <div class="menu-container" id="juice-menu">
+
+    </div>
+
+</section>
+
+
+<script src="js/auth.js"></script>
+<script src="js/logout.js"></script>
+<div id="toast" class="toast"></div>
+<!-- Inside frontend/user-menu.html -->
+<script src="js/user-menu.js"></script>
+</body>
+</html>

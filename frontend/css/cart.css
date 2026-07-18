@@ -1,0 +1,379 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    font-family:'Poppins', sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(248,245,242,0.95),
+        rgba(248,245,242,0.95)
+    );
+
+    background-size:cover;
+    background-attachment:fixed;
+
+    color:#2d1810;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    background-color:#390d05;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+    font-family:times new roman;
+}
+
+nav a:hover{
+    color:#d7ccc8;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.cart-header{
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("../images/Copilot_20260613_191041.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    text-align:center;
+    color:white;
+
+    padding:120px 20px;
+}
+
+.cart-header h1{
+    font-size:48px;
+    font-family:"Monotype Corsiva";
+    margin-bottom:15px;
+}
+
+.cart-header p{
+    font-size:18px;
+}
+
+/* =========================
+   CART CONTAINER
+========================= */
+
+.cart-container{
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+/* =========================
+   CART ITEM
+========================= */
+
+.cart-item{
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:28px;
+
+    margin-bottom:20px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+
+    transition:all 0.3s ease;
+}
+
+.cart-item:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.item-details h3{
+    font-size:  22px;
+    margin-bottom:6px;
+    color:#3e2723;
+    font-family:"Monotype Corsiva";
+}
+
+.item-details p{
+    font-size:17px;
+    color:#8b5a2b;
+    font-weight:600;
+}
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+
+.cart-item button{
+    background:#d32f2f;
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight: bold;
+    transition:0.3s;
+}
+
+.cart-item button:hover{
+    background:#b71c1c;
+    transform:scale(1.05);
+}
+
+/* =========================
+   CART SUMMARY
+========================= */
+
+.cart-summary{
+    text-align:center;
+    background:whitesmoke;
+
+    max-width:650px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 39px rgba(0,0,0,0.1);
+}
+
+.cart-summary h2{
+    margin-bottom:18px;
+    color:#2c1612;
+    font-size:26px;
+}
+
+/* =========================
+   ORDER BUTTON
+========================= */
+
+.order-btn{
+    border:none;
+
+    background:linear-gradient(
+        135deg,
+        #8b5a2b,
+        #6f4e37
+    );
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.order-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 8px 20px rgba(139,90,43,0.4);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#390d05;
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .cart-header h1{
+        font-size:45px;
+    }
+
+    .cart-item{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .cart-summary{
+        width:90%;
+    }
+}
+
+.empty-cart{
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:rgb(50, 29, 1);
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+
+    font-family:"Monotype Corsiva";
+
+    font-size:42px;
+
+    color:#ffffff;
+}
+.shop-btn{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:#8b5a2b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+}
+/* Toast Notification */
+
+.toast{
+    position:fixed;
+    top:30px;
+    right:30px;
+
+    background:#593a23;
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:12px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-20px);
+
+    transition:all 0.4s ease;
+
+    z-index:9999;
+}
+
+.toast.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+.cart-image{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-right:15px;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.item-details{
+    flex:1;
+    margin-left:15px;
+}
+
+.item-details h3{
+    margin-bottom:8px;
+    color:#3e2723;
+}
+
+.item-details p{
+    color:#8b5a2b;
+    font-weight:bold;
+}
+.cart-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Prevents the logo shapes from stretching */
+    border-radius: 12px;
+    margin-right: 15px;
+    
+    /* Elegant deep coffee dark background to give contrast to the gold */
+    background-color: #390d05; 
+    
+    /* Padding keeps the gold edges safely away from the borders */
+    padding: 8px; 
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.85));
+    /* Optional: Adds a subtle gold-toned border to anchor the card theme */
+    border: 1px solid rgba(139, 90, 43, 0.3); 
+}
