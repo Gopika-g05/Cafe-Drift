@@ -22,8 +22,6 @@ Drift Cafe is a full-stack coffee shop web app built with Express, MongoDB, and 
 
 
 ## Deployment
-
-- The app is ready for Render deployment.
 - Use `npm start` as the start command.
 - Set environment variables in Render:
   - `MONGO_URI`
