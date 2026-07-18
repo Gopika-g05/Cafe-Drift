@@ -4,6 +4,7 @@ const connectDB = require("./src/config/db");
 const orderRoutes = require("./src/routes/orderRoutes");
 const PORT = process.env.PORT || 3000;
 const path = require('path');
+const express = require('express'); // <-- Add this line right here!
 
 // 1. Serve all the static assets (CSS, JS, Images) inside the frontend folder
 app.use(express.static(path.join(__dirname, 'frontend')));
