@@ -13,12 +13,19 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
 
+// 1. Serve static files from your frontend directory first
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+// 2. API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/menu', menuRoutes);
 app.use('/api/orders', orderRoutes);
 
-app.get('/', (req, res) => res.json({ message: 'Drift Cafe API' }));
-app.use(express.static(path.join(__dirname, "../frontend")));
+// 3. Serve the index.html for the root domain or fallback navigation
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
+
 // Basic error handler
 app.use((err, req, res, next) => {
   console.error(err);
