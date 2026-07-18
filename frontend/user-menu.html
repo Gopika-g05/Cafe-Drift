@@ -28,70 +28,255 @@
 
 <section class="menu-section">
     <h2>Coffee</h2>
-
     <div class="menu-container" id="coffee-menu">
-
+        <div class="menu-card">
+            <img src="/images/espresso.jpg" alt="Espresso" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Espresso</h3>
+                <p class="description">A strong, rich shot of espresso.</p>
+                <div class="price-row">
+                    <span class="price">₹120</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('espresso', 'Espresso', 120, 'espresso.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/cappuccino.jpg" alt="Cappuccino" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Cappuccino</h3>
+                <p class="description">Creamy milk coffee with a chocolate dusting.</p>
+                <div class="price-row">
+                    <span class="price">₹180</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('cappuccino', 'Cappuccino', 180, 'cappuccino.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/latte.jpg" alt="Latte" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Latte</h3>
+                <p class="description">Smooth milk coffee topped with foam.</p>
+                <div class="price-row">
+                    <span class="price">₹190</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('latte', 'Latte', 190, 'latte.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
     <!-- Snacks Section -->
 
     <section class="menu-section">
-
     <h2>Snacks</h2>
-
     <div class="menu-container" id="snacks-menu">
-
+        <div class="menu-card">
+            <img src="/images/sandwich.jpg" alt="Sandwich" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Sandwich</h3>
+                <p class="description">Fresh veggie sandwich with melted cheese.</p>
+                <div class="price-row">
+                    <span class="price">₹140</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('sandwich', 'Sandwich', 140, 'sandwich.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/burger.jpg" alt="Burger" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Burger</h3>
+                <p class="description">Juicy burger with fresh lettuce and sauce.</p>
+                <div class="price-row">
+                    <span class="price">₹220</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('burger', 'Burger', 220, 'burger.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/fries.jpg" alt="Fries" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Fries</h3>
+                <p class="description">Crispy golden fries with seasoning.</p>
+                <div class="price-row">
+                    <span class="price">₹110</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('fries', 'Fries', 110, 'fries.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
     <!-- Desserts -->
 
     <section class="menu-section">
-
     <h2>Desserts</h2>
-
     <div class="menu-container" id="desserts-menu">
-
+        <div class="menu-card">
+            <img src="/images/brownie.jpg" alt="Brownie" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Brownie</h3>
+                <p class="description">Chocolate brownie with rich texture.</p>
+                <div class="price-row">
+                    <span class="price">₹130</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('brownie', 'Brownie', 130, 'brownie.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/cake.jpg" alt="Cake" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Cake</h3>
+                <p class="description">Delicious slice of cake with cream.</p>
+                <div class="price-row">
+                    <span class="price">₹160</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('cake', 'Cake', 160, 'cake.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/donut.jpg" alt="Donut" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Donut</h3>
+                <p class="description">Sweet glazed donut with soft texture.</p>
+                <div class="price-row">
+                    <span class="price">₹100</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('donut', 'Donut', 100, 'donut.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 
 <section class="menu-section">
-
     <h2>Teas</h2>
-<div class="menu-container" id="tea-menu">
-
-</div>
+    <div class="menu-container" id="tea-menu">
+        <div class="menu-card">
+            <img src="/images/chai.jpg" alt="Chai" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Chai</h3>
+                <p class="description">Warm spiced tea with aromatic flavor.</p>
+                <div class="price-row">
+                    <span class="price">₹90</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('chai', 'Chai', 90, 'chai.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/matcha.jpg" alt="Matcha" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Matcha</h3>
+                <p class="description">Green tea latte with silky foam.</p>
+                <div class="price-row">
+                    <span class="price">₹150</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('matcha', 'Matcha', 150, 'matcha.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="menu-section">
-
     <h2>Chocolate & Milk</h2>
-
     <div class="menu-container" id="chocolate-menu">
-
+        <div class="menu-card">
+            <img src="/images/hot-chocolate.jpg" alt="Hot Chocolate" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Hot Chocolate</h3>
+                <p class="description">Rich chocolate drink with warm cream.</p>
+                <div class="price-row">
+                    <span class="price">₹170</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('hot-chocolate', 'Hot Chocolate', 170, 'hot-chocolate.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/steamer.jpg" alt="Steamer" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Steamer</h3>
+                <p class="description">Creamy milk drink with gentle sweetness.</p>
+                <div class="price-row">
+                    <span class="price">₹160</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('steamer', 'Steamer', 160, 'steamer.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 
 <section class="menu-section">
-
     <h2>Blended & Iced Treats</h2>
-
     <div class="menu-container" id="blended-menu">
-
+        <div class="menu-card">
+            <img src="/images/smoothie.jpg" alt="Smoothie" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Smoothie</h3>
+                <p class="description">Fruity blended smoothie full of flavor.</p>
+                <div class="price-row">
+                    <span class="price">₹200</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('smoothie', 'Smoothie', 200, 'smoothie.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/frappe.jpg" alt="Frappe" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Frappe</h3>
+                <p class="description">Iced coffee frappe topped with cream.</p>
+                <div class="price-row">
+                    <span class="price">₹210</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('frappe', 'Frappe', 210, 'frappe.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/milkshake.jpg" alt="Milkshake" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Milkshake</h3>
+                <p class="description">Creamy milkshake with sweet flavor.</p>
+                <div class="price-row">
+                    <span class="price">₹180</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('milkshake', 'Milkshake', 180, 'milkshake.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 
 <section class="menu-section">
-
     <h2>Juice & Soda</h2>
-
     <div class="menu-container" id="juice-menu">
-
+        <div class="menu-card">
+            <img src="/images/fresh-juice.jpg" alt="Fresh Juice" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Fresh Juice</h3>
+                <p class="description">Freshly squeezed seasonal juice.</p>
+                <div class="price-row">
+                    <span class="price">₹140</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('fresh-juice', 'Fresh Juice', 140, 'fresh-juice.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/lemonade.jpg" alt="Lemonade" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Lemonade</h3>
+                <p class="description">Cool lemonade with fresh lemon.</p>
+                <div class="price-row">
+                    <span class="price">₹110</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('lemonade', 'Lemonade', 110, 'lemonade.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="/images/fruit-soda.jpg" alt="Fruit Soda" class="menu-item-img">
+            <div class="menu-item-details">
+                <h3>Fruit Soda</h3>
+                <p class="description">Sparkling fruit soda with berry notes.</p>
+                <div class="price-row">
+                    <span class="price">₹120</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('fruit-soda', 'Fruit Soda', 120, 'fruit-soda.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 
 
