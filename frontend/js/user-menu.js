@@ -42,7 +42,7 @@ function resolveImageSrc(item) {
         }
     }
 
-    return '/images/default-food.jpg';
+    return '/images/logo.png';
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -62,20 +62,22 @@ async function loadCategorizedMenu() {
 
         // Updated container mapping to handle both names smoothly
         const containers = {
-            "Coffee": document.getElementById("coffee-menu"),
-            "Drinks": document.getElementById("coffee-menu"),   // Maps database "Drinks" to your Coffee section
-            "Snacks": document.getElementById("snacks-menu"),
-            "Bakery": document.getElementById("snacks-menu"),   // Maps database "Bakery" to your Snacks section
-            "Desserts": document.getElementById("desserts-menu"),
-            "Tea": document.getElementById("tea-menu"),
-            "Chocolate": document.getElementById("chocolate-menu"),
-            "Blended": document.getElementById("blended-menu"),
-            "Juice": document.getElementById("juice-menu")
+            coffee: document.getElementById("coffee-menu"),
+            drinks: document.getElementById("coffee-menu"),
+            snacks: document.getElementById("snacks-menu"),
+            bakery: document.getElementById("snacks-menu"),
+            desserts: document.getElementById("desserts-menu"),
+            tea: document.getElementById("tea-menu"),
+            chocolate: document.getElementById("chocolate-menu"),
+            blended: document.getElementById("blended-menu"),
+            juice: document.getElementById("juice-menu"),
+            'main course': document.getElementById("coffee-menu"),
+            'main-course': document.getElementById("coffee-menu")
         };
 
         // Loop through each item from the database
         items.forEach(item => {
-            const targetContainer = containers[item.category];
+            const targetContainer = containers[String(item.category || '').toLowerCase().trim()];
 
             if (targetContainer) {
                 const cardHTML = `
