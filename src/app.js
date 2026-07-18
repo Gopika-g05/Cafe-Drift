@@ -22,7 +22,8 @@ app.use('/api/menu', menuRoutes);
 app.use('/api/orders', orderRoutes);
 
 // 3. Serve the index.html for the root domain or fallback navigation
-app.get('*', (req, res) => {
+// TO THIS:
+app.get('(.*)', (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
