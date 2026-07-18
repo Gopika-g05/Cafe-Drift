@@ -9,7 +9,8 @@ const orderSchema = Joi.object({
       price: Joi.number().positive().required(),
       quantity: Joi.number().min(1).default(1)
     })
-  ).min(1).required()
+  ).min(1).required(),
+  totalPrice: Joi.number().positive().required()
 });
 
 exports.create = async (req, res, next) => {
