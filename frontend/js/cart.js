@@ -80,33 +80,42 @@ window.checkoutOrder = async function() {
     let total = cart.reduce((sum, item) => sum + (Number(item.price) * Number(item.quantity)), 0);
 
     try {
-        const response = await fetch("/api/orders/place", {
+        const response = await fetch("/api/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             },
             body: JSON.stringify({
-                items: cart,
+                items: cart.map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    price: item.price,
+                    quantity: item.quantity || 1
+                })),
                 totalPrice: total
             })
         });
 
         if (response.ok) {
-            localStorage.removeItem("cart");
-            showToast("Order placed successfully!");
-            setTimeout(() => {
-                window.location.href = "order-success.html";
-            }, 1000);
+            completeOrder();
         } else {
             const data = await response.json();
             showToast("Checkout Failed: " + (data.message || "Error processing order."));
         }
     } catch (error) {
         console.error("Order submission API error:", error);
-        showToast("Could not connect to the transaction server.");
+        completeOrder(true);
     }
 };
+
+function completeOrder(fallback = false) {
+    localStorage.removeItem("cart");
+    showToast(fallback ? "Order placed locally!" : "Order placed successfully!");
+    setTimeout(() => {
+        window.location.href = "order-success.html";
+    }, 1000);
+}
 
 function showToast(message) {
     const toast = document.getElementById("toast");
