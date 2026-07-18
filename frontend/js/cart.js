@@ -32,7 +32,9 @@ function displayCartItems() {
 
         const itemId = item.id || item._id || `item-${index}`;
         const itemImageFile = item.image || item.imagePath || item.imageUrl;
-const imageSrc = itemImageFile ? `images/${itemImageFile}` : 'images/logo.png';
+        const imageSrc = itemImageFile
+            ? (itemImageFile.startsWith('http') ? itemImageFile : `/images/${itemImageFile}`)
+            : '/images/logo.png';
 
         return `
             <div class="cart-item" data-id="${itemId}">

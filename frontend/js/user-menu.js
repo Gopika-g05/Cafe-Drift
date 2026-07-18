@@ -34,13 +34,13 @@ async function loadCategorizedMenu() {
             if (targetContainer) {
                 const cardHTML = `
                     <div class="menu-card" data-id="${item._id}">
-                        <img src="images/${item.image || 'default.jpg'}" alt="${item.name}" class="menu-item-img">
+                        <img src="/images/${item.image || 'default.jpg'}" alt="${item.name}" class="menu-item-img">
                         <div class="menu-item-details">
                             <h3>${item.name}</h3>
                             <p class="description">${item.description || 'Freshly made to order.'}</p>
                             <div class="price-row">
                                 <span class="price">₹${item.price}</span>
-                                <button class="add-to-cart-btn" onclick="addToCart('${item._id}', '${item.name}', ${item.price})">
+                                <button class="add-to-cart-btn" onclick="addToCart('${item._id}', '${item.name}', ${item.price}, '${item.image || 'default.jpg'}')">
                                     Add to Cart
                                 </button>
                             </div>
@@ -63,14 +63,12 @@ async function loadCategorizedMenu() {
 function addToCart(id, name, price, image) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     
-    // Check if item already exists in the cart
     const existingItem = cart.find(item => item.id === id);
     
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
-        // Make sure 'image' is saved here so cart.js can read it!
-        cart.push({ id, name, price, image, quantity: 1 });
+        cart.push({ id, name, price, image: image || 'default.jpg', quantity: 1 });
     }
     
     localStorage.setItem("cart", JSON.stringify(cart));
